@@ -1,0 +1,86 @@
+#eportfolio {
+	#featured {
+		height: 100vh;
+		@include set-background-image('https://s3.amazonaws.com/camronkhan/images/ide.jpg', 0, 'cover', 'center', 'no-repeat', $secondary-background);
+		background-size: cover;
+		background-position: center;
+	}
+
+	#welcome {
+		background-color: $white;
+	}
+
+	#find-out-more {
+		@include set-background-image('https://s3.amazonaws.com/camronkhan/images/ide2.jpg', 0.7, 'cover', 'center', 'no-repeat', $secondary-background);
+		background-size: cover;
+		background-position: center;
+		.lead,
+		.section-title {
+			color: $white;
+		}
+		.container {
+			max-width: $md-devices;
+			.fa-icon-group {
+				margin-top: 0;
+			}
+		}
+		.icon {
+			margin: 20px auto;
+		}
+	}
+
+	#featured-projects {
+		background-color: $white;
+		.row {
+			margin-bottom: 30px;
+			@media screen and (min-width: $md-devices) {
+				margin-top: 30px;
+				margin-bottom: 40px;
+			}
+			.h3 {
+				margin-bottom: 10px;
+				@media screen and (min-width: $md-devices) {
+					margin-top: 0;
+				}
+			}
+			.featured-project-image-wrapper {
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+				@media screen and (min-width: $md-devices) {
+					width: 320px;
+					height: 180px;
+				}
+				.featured-project-image {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.image-right {
+				@media screen and (min-width: $md-devices) {
+					float: right !important;
+				}
+			}
+			.image-left {
+				@media screen and (min-width: $md-devices) {
+					float: left !important;
+				}
+			}
+		}
+		.button-wrapper {
+			margin-top: 10px;
+		}
+	}
+
+	#contact-me {
+		@include set-background-image('https://s3.amazonaws.com/camronkhan/images/laptop.jpg', 0.7, 'cover', 'center', 'no-repeat', $secondary-background);
+		background-size: cover;
+		background-position: center;
+		h1, p {
+			color: $white;
+		}
+		.button-wrapper {
+			margin-top: 40px;
+		}
+	}
+}

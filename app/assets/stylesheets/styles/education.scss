@@ -1,0 +1,21 @@
+#education {
+	.h4 {
+		margin-bottom: 15px;
+	}
+	.panel {
+		border: none;
+		box-shadow: none;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.media {
+		margin-top: 0;
+		.media-left {
+			padding-right: 25px;
+			.logo {
+				max-height: 100px;
+				width: auto;
+			}
+		}
+	}
+}

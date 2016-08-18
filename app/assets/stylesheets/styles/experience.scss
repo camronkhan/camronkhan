@@ -1,0 +1,26 @@
+#experience {
+	.row {
+		margin-bottom: 40px;
+		h2 {
+			@media screen and (min-width: $md-devices) {
+				margin-top: 0;
+			}
+		}
+		h3 {
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		.experience-image-wrapper {
+			.experience-image {
+				width: 100px;
+				height: auto;
+				float: left;
+				@media screen and (min-width: $md-devices) {
+					width: 100%;
+					height: auto;
+					float: auto;
+				}
+			}
+		}
+	}
+}

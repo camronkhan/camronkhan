@@ -1,0 +1,10 @@
+@mixin set-background-image($image-url, $opacity, $size, $position, $repeat, $fallback-color) {
+	background: $fallback-color;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), url($image-url);
+	background: -o-linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), url($image-url);
+	background: -moz-linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), url($image-url);
+	background: linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), url($image-url);
+	background-size: $size;
+	background-position: $position;
+    background-repeat: $repeat;
+}

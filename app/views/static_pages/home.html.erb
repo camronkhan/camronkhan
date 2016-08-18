@@ -1,0 +1,102 @@
+<div id="<%= @page_title.downcase %>">
+	<section class="section" id="featured">
+		<div class="container center-horizontal center-vertical"></div>
+	</section>
+	<section class="section" id="welcome">
+		<article class="container center-horizontal center-vertical">
+			<header class="section-header">
+				<h1 class="section-title text-center">Welcome</h1>
+			</header>
+			<div class="row">
+				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-10">
+					<p class="lead text-center"><%= @about_me %></p>
+				</div>
+				<div class="col-xs-12 col-md-1"></div>
+			</div>
+			<div class="text-center button-wrapper">
+				<%= link_to 'Learn More', about_path, class: 'button button-primary' %>
+			</div>
+		</article>
+	</section>
+	<section class="section" id="find-out-more">
+		<div class="container">
+			<header class="section-header">
+				<h1 class="section-title text-center">Find Out More</h1>
+				<p class="lead text-center">Find me on social media or check out my resume</p>
+			</header>
+			<div class="container">
+				<div class="row text-center fa-icon-group">
+					<div class="col-xs-6 col-sm-3 icon">
+						<a href="https://github.com/camronkhan?tab=repositories" target="_blank" class="fa-icon-set">
+							<div class="fa-icon">
+								<%= fa_icon 'github', class: 'fa-5x' %>
+							</div>
+							<p class="h4 text-center fa-icon-label">GitHub</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 icon">
+						<a href="https://www.linkedin.com/in/camron-khan-ba602859" target="_blank" class="fa-icon-set">
+							<div class="fa-icon">
+								<%= fa_icon 'linkedin', class: 'fa-5x' %>
+							</div>
+							<p class="h4 text-center fa-icon-label">LinkedIn</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 icon">
+						<a href="https://plus.google.com/103355466293380651794" target="_blank" class="fa-icon-set">
+							<div class="fa-icon">
+								<%= fa_icon 'google-plus', class: 'fa-5x' %>
+							</div>
+							<p class="h4 text-center fa-icon-label">Google</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 icon">
+						<a href="https://s3.amazonaws.com/camronkhan/documents/Camron+Khan_Resume.pdf" target="_blank" class="fa-icon-set">
+							<div class="fa-icon">
+								<%= fa_icon 'file-pdf-o', class: 'fa-5x' %>
+							</div>
+							<p class="h4 text-center fa-icon-label">Resume</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section" id="featured-projects">
+		<div class="container">
+			<header class="section-header">
+				<h1 class="section-title text-center">Featured Projects</h1>
+			</header>
+			<% @featured_projects.each_with_index do |project, index| %>
+				<div class="container">
+					<% if index.modulo(2).zero? %>
+						<%= render partial: 'static_pages/featured_projects_image_right', locals: { project: project } %>
+					<% else %>
+						<%= render partial: 'static_pages/featured_projects_image_left', locals: { project: project } %>
+					<% end %>
+				</div>
+			<% end %>
+			<div class="text-center button-wrapper">
+				<%= link_to 'See More', projects_path, class: 'button button-primary' %>
+			</div>
+		</div>
+	</section>
+	<section class="section" id="contact-me">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-10">
+					<header class="section-header">
+						<h1 class="section-title text-center">Contact</h1>
+						<p class="lead text-center"><%= @contact_me %></p>
+					</header>
+					<div class="text-center button-wrapper">
+						<%= link_to 'Get In Touch', contact_path, class: 'button button-primary' %>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-1"></div>
+			</div>
+		</div>
+	</section>
+</div>

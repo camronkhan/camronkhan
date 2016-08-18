@@ -1,0 +1,62 @@
+#portfolio {
+	.edit {
+
+	}
+	.index {
+		.panel {
+			margin-bottom: 30px;
+			height: auto;
+			@media screen and (min-width: $md-devices) {
+				position: relative;
+				height: 500px;
+			}
+			.panel-image-wrapper {
+				overflow: hidden;
+				.panel-image {
+					width: 100%;
+					height: auto;
+					@media screen and (min-width: $md-devices) {
+						height: 240px;
+					}
+				}
+			}
+			.panel-body {
+				overflow: hidden;
+			}
+			.button-wrapper {
+				margin-bottom: 30px;
+				@media screen and (min-width: $md-devices) {
+					display: block;
+					position: absolute;
+	   				bottom: 0;
+	   				width: 100%;
+	   			}
+			}
+		}
+	}
+	.new {
+
+	}
+	.show {
+		.project-details {
+			margin-top: 20px;
+		}
+		.project-body {
+			margin-bottom: 30px;
+		}
+		.fa-icon-group {
+			margin-top: 40px;
+			@media screen and (min-width: $md-devices) {
+				margin-top: 0;
+			}
+		}
+		.fa-icon-label {
+			margin-top: 0px;
+		}
+	}
+	form {
+		.button-wrapper {
+			margin-top: 40px;
+		}
+	}
+}

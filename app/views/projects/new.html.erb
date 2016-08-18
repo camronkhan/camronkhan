@@ -1,0 +1,13 @@
+<div class="page" id="<%= @page_title.downcase %>">
+	<div class="new container">
+		<header class="page-header">
+			<h1 class="page-title"><%= @page_title %> - Create Project</h1>
+		</header>
+		<form>
+			<%= render 'form' %>
+			<div class="button-wrapper">
+				<%= link_to 'Cancel', projects_path, class: 'button button-primary' %>
+			</div>
+		</form>
+	</div>
+</div>

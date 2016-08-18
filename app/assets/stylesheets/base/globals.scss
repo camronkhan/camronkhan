@@ -1,0 +1,112 @@
+$white: #FFFFFF;
+$black: #000000;
+$grey: #F7F7F5;
+$dk-grey: #333333;
+$blue: #0079C2;
+$lt-blue: #66AEDA;
+$semi-transparent-blue: rgba(0,121,194,0.6);
+
+$button-background: $semi-transparent-blue;
+
+$primary-background: $white;
+$secondary-background: $dk-grey;
+$tertiary-background: $grey;
+
+$sm-devices: 768px;
+$md-devices: 992px;
+$lg-devices: 1200px;
+
+$button-min-width: 150px;
+
+$footer-height: 50px;
+
+body {
+	min-height: 100vh;
+}
+p {
+	color: $black;
+}
+.page {
+	min-height: 100vh;
+	padding-top: 70px;
+	margin-bottom: 50px;
+}
+.page-header {
+	margin-bottom: 30px !important;
+	@media screen and (min-width: $md-devices) {
+		margin-bottom: 50px;
+	}
+}
+.page-title {
+	
+}
+.section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.section-header {
+	margin-bottom: 30px;
+}
+.section-title {
+	
+}
+.button {
+	display: inline-block !important;
+    margin: 0;
+    padding: 15px !important;
+}
+.button-primary {
+	color: $white !important;
+	border: 1px solid $semi-transparent-blue !important;
+    background-color: $semi-transparent-blue !important;
+	&:hover,
+    &:focus,
+    &:active {
+        background-color: $blue !important;
+        border-color: $blue !important;
+        outline: none !important;
+        text-decoration: none !important;
+    }
+}
+.button-secondary {
+	margin-left: 10px;
+	color: $blue !important;
+	border: 1px solid $blue !important;
+	background-color: transparent !important;
+	&:hover,
+    &:focus,
+    &:active {
+    	color: $white !important;
+        background-color: $lt-blue !important;
+        border-color: $lt-blue !important;
+        outline: none !important;
+        text-decoration: none !important;
+    }
+}
+.button-wrapper {
+	margin: 20px auto;
+}
+.fa-icon {
+	text-align: center;
+	float: none;
+}
+.fa-icon-label {
+	margin-top: 10px;
+}
+.fa-icon-label:hover,
+.fa-icon-label:focus,
+.fa-icon-label:active {
+	text-decoration: none !important;
+}
+.fa-icon-set {
+	color: $lt-blue !important;
+}
+.fa-icon-set:hover,
+.fa-icon-set:focus,
+.fa-icon-set:active {
+	color: $blue !important;
+	text-decoration: none !important;
+}
+.fa-icon-group {
+	margin: 20px auto;
+}

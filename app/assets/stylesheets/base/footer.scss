@@ -1,0 +1,15 @@
+#footer {
+	width: 100%;
+	height: $footer-height;
+	background-color: $black;
+	.container {
+		text-align: center;
+		p {
+			margin-top: 17px;
+			margin-bottom: 15px;
+		}
+		small {
+			color: $white !important;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+#nav {
+	opacity: 0.9;
+	@media screen and (min-width: $md-devices) {
+		.container-fluid {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+	.navbar-brand {
+		color: $white !important;
+	}
+	.navbar-brand:hover,
+	.navbar-brand:focus,
+	.navbar-brand:active {
+		color: $lt-blue !important;
+	}
+	.nav-link {
+		color: $white !important;
+	}
+	.nav-link:hover,
+	.nav-link:focus,
+	.nav-link:active {
+		color: $lt-blue !important;
+	}
+}
+.navbar-inverse {
+	border-color: transparent;
+}

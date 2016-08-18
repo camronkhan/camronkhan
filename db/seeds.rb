@@ -56,7 +56,7 @@ Project.create([
 		title: 'ePortfolio',
 		description: 'View the code behind this ePortfolio. This site was developed with Ruby 2, Rails 4, PostgreSQL 9.5, Bootstrap 3, Sass, CoffeeScript, and jQuery. It is hosted on Heroku and assets are served from AWS S3.',
 		image: 'https://s3.amazonaws.com/camronkhan/images/web-develop.jpg',
-		project_location: 'http://camronkhan.herokuapp.com/',
+		project_location: 'http://camronkhan.com/',
 		source_location: 'https://github.com/camronkhan/camronkhan',
 		featured: true
 	},

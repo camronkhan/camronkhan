@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 	
   get 'sessions/new'
 
-  	resources :projects, only: [:index, :show]
-	
 	root 'static_pages#home'
   
 	get     'home',       	to: 'static_pages#home',        as: 'home'
@@ -11,5 +9,9 @@ Rails.application.routes.draw do
 	get     'education',  	to: 'static_pages#education',   as: 'education'
 	get     'experience',	to: 'static_pages#experience',  as: 'experience'
 	get     'contact',    	to: 'static_pages#contact', 	as: 'contact'
+	get		'login',		to: 'sessions#new',				as: 'login'
+	post	'login',		to: 'sessions#create',
+	get		'logout',		to: 'sessions#destroy',			as: 'logout'
 
+	resources :projects, only: [:index, :show]
 end

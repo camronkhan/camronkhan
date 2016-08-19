@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 	
+  get 'sessions/new'
+
   	resources :projects, only: [:index, :show]
 	
 	root 'static_pages#home'

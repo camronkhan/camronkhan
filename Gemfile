@@ -19,3 +19,7 @@ gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'rspec-rails', '~> 3.5', '>= 3.5.1', group: [:development, :test]
+gem 'factory_girl_rails', '~> 4.7', group: :test
+gem 'faker', '~> 1.6', '>= 1.6.6', group: :test
+gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1', group: :test
+gem 'database_cleaner', '~> 1.5', '>= 1.5.3', group: :test

@@ -1,3 +1,12 @@
+User.create([
+	{
+		name: 'Camron',
+		email: 'camron.khan@gmail.com'
+		password: "<%= ENV['CAMRONKHAN_PASSWORD'] %>",
+		password_confirmation: "<%= ENV['CAMRONKHAN_PASSWORD'] %>"
+	}
+]}
+
 Project.create([
 	{
 		title: 'sniffdit',

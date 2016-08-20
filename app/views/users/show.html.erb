@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2>Welcome, <%= current_user.name %></h2>
+<h3>What would you like to do?</h3>
+<ul>
+	<li class="navlink"><%= link_to 'Update my profile', edit_user_path(current_user.id), class: 'nav-link' %></li>
+	<li class="navlink"><%= link_to 'Create a new project', new_project_path, class: 'nav-link' %></li>
+	<li class="navlink"><%= link_to 'Update or delete an existing project', projects_path, class: 'nav-link' %></li>
+	<li class="navlink"><%= link_to 'Logout of the application', logout_path, class: 'nav-link' %></li>
+</ul>

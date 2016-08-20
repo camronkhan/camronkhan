@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-	
-  get 'users/show'
-
-  get 'users/edit'
-
-  get 'sessions/new'
 
 	root 'static_pages#home'
    
@@ -18,4 +12,7 @@ Rails.application.routes.draw do
 	delete	'logout',		to: 'sessions#destroy'
 
 	resources :projects, only: [:index, :show]
+
+	resources :users, only: [:show, :edit]
+	
 end

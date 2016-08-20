@@ -1,42 +1,33 @@
-<div class="page" id="<%= @page_title.downcase %>">
-  <div class="show container">
-    <header class="page-header">
-      <h1 class="page-title"><%= @project.title %></h1>
-      <div class="project-details">
-        <p><%= @project.created_at.strftime('%B %d, %Y') %></p>
-      </div>
-    </header>
-    <div class="row">
-      <div class="col-xs-12 col-sm-9">
-        <% unless @project.description.blank? %>
-          <div class="project-description"><%= markdown(@project.description) %></div>
-        <% end %>
-        <% unless @project.body.blank? %>
-          <div class="project-body"><%= markdown(@project.body) %></div>
-        <% end %>
-      </div>
-      <div class="col-xs-12 col-sm-1"></div>
-      <div class="col-xs-12 col-sm-2">
-        <div class="fa-icon-group">
-          <% unless @project.project_location.blank? %>
-            <a href="<%= @project.project_location %>" class="fa-icon-set">
-              <p class="h4 text-center fa-icon-label">View Project</p>
-              <div class="fa-icon">
-                <%= fa_icon 'external-link-square', class: 'fa-5x' %>
-              </div>
-            </a>
-            <br>
-          <% end %>
-          <% unless @project.source_location.blank? %>
-            <a href="<%= @project.source_location %>" class="fa-icon-set">
-              <p class="h4 text-center fa-icon-label">Source Code</p>
-              <div class="fa-icon">
-                <%= fa_icon 'github-square', class: 'fa-5x' %>
-              </div>
-            </a>
-          <% end %>
-        </div>
-      </div>
+<div class="row">
+  <div class="col-xs-12 col-sm-9">
+    <% unless @project.description.blank? %>
+      <div class="project-description"><%= markdown(@project.description) %></div>
+    <% end %>
+    <% unless @project.body.blank? %>
+      <div class="project-body"><%= markdown(@project.body) %></div>
+    <% end %>
+  </div>
+  <div class="col-xs-12 col-sm-1"></div>
+  <div class="col-xs-12 col-sm-2">
+    <div class="fa-icon-group">
+      <% unless @project.project_location.blank? %>
+        <a href="<%= @project.project_location %>" class="fa-icon-set">
+          <p class="h4 text-center fa-icon-label">View Project</p>
+          <div class="fa-icon">
+            <%= fa_icon 'external-link-square', class: 'fa-5x' %>
+          </div>
+        </a>
+        <br>
+      <% end %>
+      <% unless @project.source_location.blank? %>
+        <a href="<%= @project.source_location %>" class="fa-icon-set">
+          <p class="h4 text-center fa-icon-label">Source Code</p>
+          <div class="fa-icon">
+            <%= fa_icon 'github-square', class: 'fa-5x' %>
+          </div>
+        </a>
+      <% end %>
     </div>
   </div>
 </div>
+

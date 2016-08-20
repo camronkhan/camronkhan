@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 	get     'experience',	to: 'static_pages#experience',  as: 'experience'
 	get     'contact',    	to: 'static_pages#contact', 	as: 'contact'
 	get		'login',		to: 'sessions#new',				as: 'login'
-	post	'login',		to: 'sessions#create',
+	post	'login',		to: 'sessions#create'
 	delete	'logout',		to: 'sessions#destroy'
 
 	resources :projects, only: [:index, :show]

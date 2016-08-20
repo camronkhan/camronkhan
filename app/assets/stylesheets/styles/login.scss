@@ -1,3 +1,19 @@
 #login {
-	
+	.form-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		@media screen and (min-width: $sm-devices) {
+			width: 50%;
+		}
+		@media screen and (min-width: $md-devices) {
+			width: 45%;
+		}
+		@media screen and (min-width: $lg-devices) {
+			width: 40%;
+		}
+	}
+	.button-wrapper {
+		margin-top: 40px;
+	}
 }

@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @page_title = "Portfolio"
+    @page_action = 'Index'
     @projects = Project.all.recent
   end
 
@@ -12,17 +13,20 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @page_title = "Portfolio"
+    @page_action = 'Show'
   end
 
   # GET /projects/new
   def new
     @page_title = "Portfolio"
+    @page_action = 'New'
     @project = Project.new
   end
 
   # GET /projects/1/edit
   def edit
     @page_title = "Portfolio"
+    @page_action = 'Edit'
   end
 
   # POST /projects

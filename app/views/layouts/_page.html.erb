@@ -1,0 +1,13 @@
+<div class="page <% if @page_title != 'ePortfolio' %>container<% end %>" id="<%= @page_title.downcase %>">
+	<% if @page_title != 'ePortfolio' %>
+		<header class="page-header">
+			<h1 class="page-title"><%= @page_title %></h1>
+		</header>
+		<% flash.each do |message_type, message| %>
+			<div class="alert alert-<%= message_type %>"><%= message %></div>
+		<% end %>
+	<% end %>
+	<article class="<% unless @page_action.blank? %><%= @page_action.downcase %><% end %>">
+		<%= yield %>
+	</article>
+</div>

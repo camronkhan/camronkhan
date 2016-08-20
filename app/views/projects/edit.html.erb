@@ -1,12 +1,5 @@
-<div class="page" id="<%= @page_title.downcase %>">
-	<div class="edit container">
-		<header class="page-header">
-			<h1 class="page-title"><%= @page_title %> - Edit Project</h1>
-		</header>
-		<form>
-			<%= render 'form' %>
-			<%= link_to 'View Project', @project, class: 'button button-primary' %>
-			<%= link_to 'Cancel', projects_path, class: 'button button-primary' %>
-		</form>
-	</div>
-</div>
+<form>
+	<%= render 'form' %>
+	<%= link_to 'View Project', @project, class: 'button button-primary' %>
+	<%= link_to 'Cancel', projects_path, class: 'button button-primary' %>
+</form>

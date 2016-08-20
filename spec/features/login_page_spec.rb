@@ -1,10 +1,14 @@
-require 'rails/helper'
+require 'rails_helper'
 
-feature 'user logs in' do
+RSpec.feature 'user logs in', type: :feature do
 
 	scenario 'with invalid email and password' do
 		login_with 'email@example.com', '12345678'
-		expect(flash).to be_empty
+		expect(page).to have_content('Invalid email/password combination')
+		# Ensure flash does not persist across pages
+		visit root_path
+		visit login_path
+		expect(page).to_not have_content('Invalid email/password combination')
 	end
 
 	private

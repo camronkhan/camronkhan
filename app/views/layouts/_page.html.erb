@@ -1,4 +1,4 @@
-<div class="page <% if @page_title != 'ePortfolio' %>container<% end %>" id="<%= @page_title.downcase %>">
+<div class="page <% unless @page_title.eql? 'ePortfolio' %>container<% end %>" id="<%= @page_title.downcase %>">
 	<% if @page_title != 'ePortfolio' %>
 		<header class="page-header">
 			<h1 class="page-title"><%= @page_title %></h1>

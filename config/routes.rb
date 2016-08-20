@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 	
+  get 'users/show'
+
+  get 'users/edit'
+
   get 'sessions/new'
 
 	root 'static_pages#home'

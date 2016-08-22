@@ -9,6 +9,9 @@ class UsersController < ApplicationController
 
 	# GET /users/1/edit
   def edit
+  	if !logged_in?
+  		redirect_to root_path
+  	end
   	@page_title = 'Admin'
   	@page_action = 'Edit'
   end
@@ -28,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password)

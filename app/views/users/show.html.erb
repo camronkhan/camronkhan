@@ -4,5 +4,5 @@
 	<li class="navlink"><%= link_to 'Update my profile', edit_user_path(current_user.id), class: 'nav-link' %></li>
 	<li class="navlink"><%= link_to 'Create a new project', new_project_path, class: 'nav-link' %></li>
 	<li class="navlink"><%= link_to 'Update or delete an existing project', projects_path, class: 'nav-link' %></li>
-	<li class="navlink"><%= link_to 'Logout of the application', logout_path, class: 'nav-link' %></li>
+	<li class="navlink"><%= link_to 'Logout of the application', logout_path, method: :delete, class: 'nav-link' %></li>
 </ul>

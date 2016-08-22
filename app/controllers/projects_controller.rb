@@ -18,6 +18,9 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
+    if !logged_in?
+      redirect_to root_path
+    end
     @page_title = "Portfolio"
     @page_action = 'New'
     @project = Project.new
@@ -25,6 +28,9 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    if !logged_in?
+      redirect_to root_path
+    end
     @page_title = "Portfolio"
     @page_action = 'Edit'
   end

@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if !logged_in?
+      redirect_to root_path
+    end
   	@page_title = 'Admin'
   	@page_action = 'Show'
   end

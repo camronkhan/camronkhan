@@ -1,4 +1,5 @@
 ePortfolio:
   title: ePortfolio
   description: Camron Khan's ePortfolio
+  image: imagefile.jpg
   featured: true
